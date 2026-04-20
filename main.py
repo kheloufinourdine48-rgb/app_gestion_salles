@@ -33,3 +33,7 @@ for salle in service.recuperer_salles():
 service.supprimer_salle("A206")
 print("Salle supprimée")
 
+from views.view_salle import ViewSalle
+app = ViewSalle()
+app.mainloop()
+
