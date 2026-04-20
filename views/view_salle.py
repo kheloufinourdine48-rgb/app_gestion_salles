@@ -56,3 +56,9 @@ class ViewSalle(ctk.CTk):
         ok, msg = self.service.ajouter_salle(salle)
         print(msg)
         self.lister()
+
+    def modifier(self):
+        salle = self.get_values()
+        ok, msg = self.service.modifier_salle(salle)
+        print(msg)
+        self.lister()
