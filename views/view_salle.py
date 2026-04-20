@@ -62,3 +62,8 @@ class ViewSalle(ctk.CTk):
         ok, msg = self.service.modifier_salle(salle)
         print(msg)
         self.lister()
+
+    def supprimer(self):
+        code = self.entry_code.get()
+        self.service.supprimer_salle(code)
+        self.lister()
