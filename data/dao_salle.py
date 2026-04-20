@@ -14,3 +14,13 @@ class DataSalle:
             password=config["password"],
             database=config["database"]
         )
+
+    def insert_salle(self, salle):
+        conn = self.get_connection()
+        cursor = conn.cursor()
+
+        query = "INSERT INTO salle VALUES (%s, %s, %s, %s)"
+        cursor.execute(query, (salle.code, salle.libelle, salle.type, salle.capacite))
+
+        conn.commit()
+        conn.close()
