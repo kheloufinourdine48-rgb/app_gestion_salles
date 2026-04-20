@@ -12,3 +12,18 @@ class ViewSalle(ctk.CTk):
         self.geometry("700x500")
 
         self.service = ServiceSalle()
+
+        self.frameInfo = ctk.CTkFrame(self)
+        self.frameInfo.pack(pady=10)
+
+        self.entry_code = ctk.CTkEntry(self.frameInfo, placeholder_text="Code")
+        self.entry_code.grid(row=0, column=0, padx=5, pady=5)
+
+        self.entry_libelle = ctk.CTkEntry(self.frameInfo, placeholder_text="Libellé")
+        self.entry_libelle.grid(row=0, column=1, padx=5, pady=5)
+
+        self.entry_type = ctk.CTkEntry(self.frameInfo, placeholder_text="Type")
+        self.entry_type.grid(row=1, column=0, padx=5, pady=5)
+
+        self.entry_capacite = ctk.CTkEntry(self.frameInfo, placeholder_text="Capacité")
+        self.entry_capacite.grid(row=1, column=1, padx=5, pady=5)
